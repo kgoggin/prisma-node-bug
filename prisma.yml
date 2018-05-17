@@ -1,2 +1,4 @@
 endpoint: https://us1.prisma.sh/kyle-goggin-08ba7b/node-bug/dev
 datamodel: datamodel.graphql
+seed:
+  import: seed.graphql

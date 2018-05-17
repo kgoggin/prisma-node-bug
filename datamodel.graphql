@@ -21,6 +21,7 @@ type PhoneNumber {
 
 type FinancialAccount {
   id: ID! @unique
+  key: String @unique
   campuses: [Campus!]!
   description: String!
   isActive: Boolean!
@@ -127,7 +128,7 @@ type GroupRole {
   description: String!
   groupType: GroupType
   isLeader: Boolean
-  name: String!
+  name: String! @unique
   type: GROUP_ROLE_TYPE
 }
 
@@ -135,12 +136,13 @@ type GroupType {
   id: ID! @unique
   description: String
   groups: [Group!]!
-  name: String!
+  name: String! @unique
   roles: [GroupRole!]!
 }
 
 type Group {
   id: ID! @unique
+  key: String @unique
   description: String
   type: GroupType!
   invites: [GroupInvite!]!
